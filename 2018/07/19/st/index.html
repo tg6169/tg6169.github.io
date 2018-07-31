@@ -79,7 +79,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="algorithm," />
 
 
 
@@ -91,13 +91,14 @@
 
 
 <meta name="description" content="ST算法用于区间最值问题，在O(N log N)的预处理后能以O(1)在线回答数列A中下标l~r之间的数的最大值 该算法利用了倍增的思想 初始化设F[i,j]表示从i开始的2^j个数的最大值 即子区间[i,i+2^j-1]的最大值 递推边界 F[i,0]=A[i] 在递推时，我们把子区间成倍增长，有 F[i,j]=max(F[i,j-1],F[i+2^j,j-1]) 即长度为2^j的子区间左右两端">
+<meta name="keywords" content="algorithm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ST算法">
 <meta property="og:url" content="http://yoursite.com/2018/07/19/st/index.html">
 <meta property="og:site_name" content="Tom&#39;s Blog">
 <meta property="og:description" content="ST算法用于区间最值问题，在O(N log N)的预处理后能以O(1)在线回答数列A中下标l~r之间的数的最大值 该算法利用了倍增的思想 初始化设F[i,j]表示从i开始的2^j个数的最大值 即子区间[i,i+2^j-1]的最大值 递推边界 F[i,0]=A[i] 在递推时，我们把子区间成倍增长，有 F[i,j]=max(F[i,j-1],F[i+2^j,j-1]) 即长度为2^j的子区间左右两端">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-19T13:01:48.065Z">
+<meta property="og:updated_time" content="2018-07-31T04:12:48.905Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ST算法">
 <meta name="twitter:description" content="ST算法用于区间最值问题，在O(N log N)的预处理后能以O(1)在线回答数列A中下标l~r之间的数的最大值 该算法利用了倍增的思想 初始化设F[i,j]表示从i开始的2^j个数的最大值 即子区间[i,i+2^j-1]的最大值 递推边界 F[i,0]=A[i] 在递推时，我们把子区间成倍增长，有 F[i,j]=max(F[i,j-1],F[i+2^j,j-1]) 即长度为2^j的子区间左右两端">
@@ -207,6 +208,16 @@
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -381,6 +392,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+          
+        </div>
+      
 
       
       
@@ -492,6 +509,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
