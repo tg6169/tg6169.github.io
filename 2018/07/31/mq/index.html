@@ -90,13 +90,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tom&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/page/3/index.html">
+<meta name="description" content="单调队列，即单调递增或递减的队列 同时，它也被称为双端队列，就是说它不同于一般的队列只能在队首删除，队尾插入，它能在队首队尾同时删除 以维护单调递减队列为例 为保证队列的递减性，在插入元素v时，要与队尾元素比较。 如果队尾元素不大于v，删除队尾元素，然后v继续与新的队尾元素比较，直到队尾的元素大于v，这个时候才将v插入队列 单调队列，保持元素单调性的同时，也能及时排除不可能解，从而满足动态规划的最">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单调队列">
+<meta property="og:url" content="http://yoursite.com/2018/07/31/mq/index.html">
 <meta property="og:site_name" content="Tom&#39;s Blog">
+<meta property="og:description" content="单调队列，即单调递增或递减的队列 同时，它也被称为双端队列，就是说它不同于一般的队列只能在队首删除，队尾插入，它能在队首队尾同时删除 以维护单调递减队列为例 为保证队列的递减性，在插入元素v时，要与队尾元素比较。 如果队尾元素不大于v，删除队尾元素，然后v继续与新的队尾元素比较，直到队尾的元素大于v，这个时候才将v插入队列 单调队列，保持元素单调性的同时，也能及时排除不可能解，从而满足动态规划的最">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-31T02:29:40.070Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tom&#39;s Blog">
+<meta name="twitter:title" content="单调队列">
+<meta name="twitter:description" content="单调队列，即单调递增或递减的队列 同时，它也被称为双端队列，就是说它不同于一般的队列只能在队首删除，队尾插入，它能在队首队尾同时删除 以维护单调递减队列为例 为保证队列的递减性，在插入元素v时，要与队尾元素比较。 如果队尾元素不大于v，删除队尾元素，然后v继续与新的队尾元素比较，直到队尾的元素大于v，这个时候才将v插入队列 单调队列，保持元素单调性的同时，也能及时排除不可能解，从而满足动态规划的最">
 
 
 
@@ -126,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/page/3/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/31/mq/"/>
 
 
 
 
 
-  <title>归档 | Tom's Blog</title>
+  <title>单调队列 | Tom's Blog</title>
   
 
 
@@ -151,7 +155,7 @@
     
   
 
-  <div class="container sidebar-position-right page-archive">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -269,410 +273,184 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
-        
-        
-         
-        
-        OK! 目前共计 46 篇日志。 继续努力。
-      </span>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/31/mq/">
 
-      
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tom Green">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tom's Blog">
+    </span>
+
+    
+      <header class="post-header">
 
         
         
+          <h1 class="post-title" itemprop="name headline">单调队列</h1>
         
 
-        
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-31T09:36:17+08:00">
+                2018-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/06/17/kmp/" itemprop="url">
-              
-                <span itemprop="name">KMP字符串匹配</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-17T18:06:45+08:00"
-              content="2018-06-17" >
-          06-17
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/06/07/love/" itemprop="url">
-              
-                <span itemprop="name">love</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-07T22:05:22+08:00"
-              content="2018-06-07" >
-          06-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/26/sdoi10zgs/" itemprop="url">
-              
-                <span itemprop="name">SDOI2010猪国杀</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-26T23:30:11+08:00"
-              content="2018-05-26" >
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>单调队列，即单调递增或递减的队列</p>
+<p>同时，它也被称为双端队列，就是说它不同于一般的队列只能在队首删除，队尾插入，它能在队首队尾同时删除</p>
+<p>以维护单调递减队列为例</p>
+<p>为保证队列的递减性，在插入元素v时，要与队尾元素比较。</p>
+<p>如果队尾元素不大于v，删除队尾元素，然后v继续与新的队尾元素比较，直到队尾的元素大于v，这个时候才将v插入队列</p>
+<p>单调队列，保持元素单调性的同时，也能及时排除不可能解，从而满足动态规划的最优性要求，优化动态规划算法</p>
+<h2 id="例1"><a href="#例1" class="headerlink" title="例1"></a>例1</h2><p><a href="https://vijos.org/d/nssy/p/58aecd5bd3d8a1430c2fb2b7" target="_blank" rel="noopener">原题地址</a></p>
+<h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>输入一个长度为n的整数序列，从中找出一段不超过M的连续子序列，使得整个序列的和最大。 </p>
+<h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行两个数n,m(n&lt;=3000, m&lt;=n) </p>
+<p>第二行有n个数，要求在n个数找到最大子序和 </p>
+<h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>一个数，数出他们的最大子序和 </p>
+<h4 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入 </span><br><span class="line">6 4 </span><br><span class="line">1 -3 5 1 -2 3</span><br><span class="line"></span><br><span class="line">输出</span><br><span class="line">7</span><br></pre></td></tr></table></figure>
+<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>m≤n≤3000</p>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>利用前缀和做差求区间和</p>
+<p>枚举右端点i，问题就是找到一个左端点 k,i-m&lt;=k&lt;=i-1使s[k]最小</p>
+<p>(这样s[i]-s[k]才能更大)</p>
+<p>通过分析可知，可能成为最优解的序列一定满足</p>
+<p>下标位置递增，对应的前缀和S递增</p>
+<ol start="0">
+<li><p>随着右端点变从前向后扫描，对某个i执行操作</p>
+</li>
+<li><p>判断对头元素与i的距离是否超过m，超出则出队</p>
+</li>
+<li>此时队首就是右端点为i时，左端点为k的最优选择</li>
+<li>不断删除队尾元素，直到对应的S值小于S[i],然后把i 作为一个新的决策入队</li>
+</ol>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int n,m,ans;</span><br><span class="line">int sum[3003],a[3003],q[3003];</span><br><span class="line">int l=1,r=1;</span><br><span class="line">int main()&#123;</span><br><span class="line">	scanf(&quot;%d%d&quot;,&amp;n,&amp;m);</span><br><span class="line">	for(int i=1;i&lt;=n;++i)&#123;</span><br><span class="line">		scanf(&quot;%d&quot;,&amp;a[i]);</span><br><span class="line">		sum[i]=sum[i-1]+a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	q[1]=0;</span><br><span class="line">	for(int i=1;i&lt;=n;++i)&#123;</span><br><span class="line">		while(l&lt;=r&amp;&amp;q[l]&lt;i-m)++l;</span><br><span class="line">		ans=max(ans,sum[i]-sum[q[l]]);</span><br><span class="line">		while(l&lt;=r&amp;&amp;sum[q[r]]&gt;=sum[i])--r;</span><br><span class="line">		q[++r]=i;</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;%d&quot;,ans);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="例2"><a href="#例2" class="headerlink" title="例2"></a>例2</h2><p><a href="https://www.luogu.org/problemnew/show/P2422" target="_blank" rel="noopener">原题地址</a></p>
+<h4 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h4><p>kkk做了一个人体感觉分析器。每一天，人都有一个感受值Ai，Ai越大，表示人感觉越舒适。在一段时间[i, j]内，人的舒适程度定义为[i, j]中最不舒服的那一天的感受值 * [i, j]中每一天感受值的和。现在给出kkk在连续N天中的感受值，请问，在哪一段时间，kkk感觉最舒适？ </p>
+<h4 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h4><p>第一行为N，代表数据记录的天数</p>
+<p>第二行N个整数，代表每一天的感受值</p>
+<h4 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h4><p>一行，表示在最舒适的一段时间中的感受值</p>
+<h4 id="样例-1"><a href="#样例-1" class="headerlink" title="样例"></a>样例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入</span><br><span class="line">6</span><br><span class="line">3 1 6 4 5 2</span><br><span class="line"></span><br><span class="line">输出</span><br><span class="line">60</span><br></pre></td></tr></table></figure>
+<h4 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h4><p>样例解释：</p>
+<p>kkk最开心的一段时间是第3天到第5天，开心值：(6+4+5)*4=60</p>
+<p>对于30%的数据，1&lt;=N&lt;=100</p>
+<p>对于70%的数据，1&lt;=N&lt;=2000</p>
+<p>对于100%的数据，1&lt;=N&lt;=100000，1&lt;=感受值&lt;=1000000</p>
+<h3 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h3><p>这个题的数据范围规定没有负数，所以前缀和绝对是会越来越大的，所以队中元素应该是那个最不舒服的值。 </p>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int n;</span><br><span class="line">long long a[100005],q[100005],sum[100005],f[100005],tail,ans;</span><br><span class="line">int main()&#123;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	for(int i=1;i&lt;=n;++i)&#123;</span><br><span class="line">		cin&gt;&gt;a[i];sum[i]=sum[i-1]+a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=1;i&lt;=n+1;++i)&#123;</span><br><span class="line">		while(a[q[tail]]&gt;a[i])&#123;</span><br><span class="line">			f[q[tail]]+=(sum[i-1]-sum[q[tail]]);</span><br><span class="line">			tail--;</span><br><span class="line">		&#125;</span><br><span class="line">		f[i]=sum[i]-sum[q[tail]];</span><br><span class="line">		q[++tail]=i;</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i=1;i&lt;=n;++i)ans=max(ans,f[i]*a[i]);</span><br><span class="line">	cout&lt;&lt;ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/07/note_friend/" itemprop="url">
-              
-                <span itemprop="name">思考随笔</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-07T17:27:00+08:00"
-              content="2018-04-07" >
-          04-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/07/facebookcrisis/" itemprop="url">
-              
-                <span itemprop="name">facebook隐私危机</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-07T16:12:42+08:00"
-              content="2018-04-07" >
-          04-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/04/maxsubparagraphsum/" itemprop="url">
-              
-                <span itemprop="name">最大字段和问题POJ 1050</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-04T13:12:15+08:00"
-              content="2018-04-04" >
-          04-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/04/fractalstreets/" itemprop="url">
-              
-                <span itemprop="name">POJ3889 Fractal Streets</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-04T12:36:05+08:00"
-              content="2018-04-04" >
-          04-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/30/bj/" itemprop="url">
-              
-                <span itemprop="name">二分答案转化为判定</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-30T22:31:14+08:00"
-              content="2018-03-30" >
-          03-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/30/bs/" itemprop="url">
-              
-                <span itemprop="name">二分</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-30T21:54:28+08:00"
-              content="2018-03-30" >
-          03-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/03/15/concentration/" itemprop="url">
-              
-                <span itemprop="name">The Power Of Concentration</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-15T12:47:51+08:00"
-              content="2018-03-15" >
-          03-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/25/ustl/" rel="next" title="常用STL">
+                <i class="fa fa-chevron-left"></i> 常用STL
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/31/atlprc/" rel="prev" title="中华人民共和国反恐怖主义法.评论">
+                中华人民共和国反恐怖主义法.评论 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/4/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -680,6 +458,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODExOS8xNDY0OQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -700,8 +487,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -743,6 +539,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#例1"><span class="nav-number">1.</span> <span class="nav-text">例1</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">1.0.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式"><span class="nav-number">1.0.2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式"><span class="nav-number">1.0.3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例"><span class="nav-number">1.0.4.</span> <span class="nav-text">样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#说明"><span class="nav-number">1.0.5.</span> <span class="nav-text">说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析"><span class="nav-number">1.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">1.1.1.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例2"><span class="nav-number">2.</span> <span class="nav-text">例2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式-1"><span class="nav-number">2.0.2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式-1"><span class="nav-number">2.0.3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样例-1"><span class="nav-number">2.0.4.</span> <span class="nav-text">样例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#说明-1"><span class="nav-number">2.0.5.</span> <span class="nav-text">说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析-1"><span class="nav-number">2.1.</span> <span class="nav-text">解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-1"><span class="nav-number">2.1.1.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -884,6 +696,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -912,6 +728,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
