@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('��������������') !== ''){
+                alert('�������');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="AES简介AES加密算法即密码学中的高级加密标准（Advanced Encryption Standard，AES），又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。这个标准用来替代原先的DES，已经被多方分析且广为全世界所使用。经过五年的甄选流程，高级加密标准由美国国家标准与技术研究院 （NIST）于2001年11月26日发布于FIPS PUB 197，并在2002年5月26日">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AES算法">
+<meta property="og:url" content="http://yoursite.com/2018/08/03/aes/index.html">
+<meta property="og:site_name" content="Tom&#39;s Blog">
+<meta property="og:description" content="AES简介AES加密算法即密码学中的高级加密标准（Advanced Encryption Standard，AES），又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。这个标准用来替代原先的DES，已经被多方分析且广为全世界所使用。经过五年的甄选流程，高级加密标准由美国国家标准与技术研究院 （NIST）于2001年11月26日发布于FIPS PUB 197，并在2002年5月26日">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464105526264.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464105614954.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464139741913.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464139781469.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464139837001.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464105742351.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464139933244.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464105885821.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464105904485.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464140268239.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464106070075.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464106089844.png">
+<meta property="og:updated_time" content="2018-08-03T05:25:23.082Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AES算法">
+<meta name="twitter:description" content="AES简介AES加密算法即密码学中的高级加密标准（Advanced Encryption Standard，AES），又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。这个标准用来替代原先的DES，已经被多方分析且广为全世界所使用。经过五年的甄选流程，高级加密标准由美国国家标准与技术研究院 （NIST）于2001年11月26日发布于FIPS PUB 197，并在2002年5月26日">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464105526264.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/08/03/aes/"/>
+
+
+
+
+
+  <title>AES算法 | Tom's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tom's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/03/aes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tom Green">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tom's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">AES算法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-03T12:55:36+08:00">
+                2018-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="AES简介"><a href="#AES简介" class="headerlink" title="AES简介"></a>AES简介</h3><p>AES加密算法即密码学中的高级加密标准（Advanced Encryption Standard，AES），又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。这个标准用来替代原先的DES，已经被多方分析且广为全世界所使用。经过五年的甄选流程，高级加密标准由美国国家标准与技术研究院 （NIST）于2001年11月26日发布于FIPS PUB 197，并在2002年5月26日成为有效的标准。</p>
+<p>AES算法本质上是一种对称分组密码体制，采用代替/置换网络，每轮由三层组成：线性混合层确保多轮之上的高度扩散，非线性层由16个S盒并置起到混淆的作用，密钥加密层将子密钥异或到中间状态。AES是一个迭代分组密码，其分组长度和密钥长度都是可变的，只是为了满足AES的要求才限定处理的分组大小为128位，而密钥长度为128位、192位或256位，相应的迭代轮数N，为10轮、12轮、14轮。AES汇聚了安全性能、效率、可实现性、灵活性等优点。最大的优点是可以给出算法的最佳查分特征的概率，并分析算法抵抗查分密码分析及线性密码分析的能力。</p>
+<h3 id="AES算法概述"><a href="#AES算法概述" class="headerlink" title="AES算法概述"></a>AES算法概述</h3><p>AES算法，基本变换包括SubBytes（字节替代）、ShiftRows（行移位）、MixColumns（列混淆）、AddRoundKey(轮密钥加）KeyExtension（密钥扩展）</p>
+<p><img src="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464105526264.png" alt=""></p>
+<p>AES算法中的加密、解密过程要经过多次数据变换操作，每一次变换操作会产生一个中间结果，称为状态(State)，算法的执行过程如下：</p>
+<p>①：给定一个明文M，将State初始化为M，并进行AddRoundKey操作，将轮密钥与State异或。</p>
+<p>②：对前Nr-1轮中的每一轮，用S盒进行一次SubBytes代替变换，对State做一次ShiftRows行移位操作，再对State做一次MixColumns列混淆操作，然后进行AddRoundKey操作。</p>
+<p>③：按照顺序分别进行SubBytes、ShiftRows、AddRoundKey操作。</p>
+<p>④：将最后的State中的内容定义为密文C。</p>
+<p>AES的解密算法于加密不同，基本运算中除轮密钥加(AddRoundKey)不变之外，其余操作如SubBytes、ShiftRows、MixColumns都要求进行求逆变换。</p>
+<h3 id="AES算法详解"><a href="#AES算法详解" class="headerlink" title="AES算法详解"></a>AES算法详解</h3><p>明文及密钥的组织排列方式(以明文分组为128bits为例组成的阵列)：</p>
+<p><img src="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464105614954.png" alt=""></p>
+<p>以明文分组（或密钥）为128bits、192bits 、256bits为例组成的阵列：</p>
+<p><img src="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464139741913.png" alt=""></p>
+<p>一些相关的的术语定义和表示：</p>
+<ul>
+<li>状态（State）：密码运算的中间结果称为状态。</li>
+<li>State的表示：状态用以字节为基本构成元素的矩阵阵列来表示，该阵列有4行，列数记为Nb。 Nb=分组长度（bits）÷ 32 Nb可以取的值为4，6，8，对应的分组长度为128， 192， 256 bits。</li>
+<li>密码密钥（Cipher Key）的表示： Cipher Key类似地用一个4行的矩阵阵列来表示，列数记为Nk。 Nk=密钥长度（bits）÷32 Nk可以取的值为4，6，8，对应的密钥长度为128， 192， 256 bits。</li>
+</ul>
+<p>轮数（Round）的不同取值：</p>
+<p><img src="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464139781469.png" alt=""></p>
+<h4 id="ByteSubstitution-字节替代"><a href="#ByteSubstitution-字节替代" class="headerlink" title="ByteSubstitution(字节替代)"></a>ByteSubstitution(字节替代)</h4><p>非线性的字节替代，单独处理每个字节：</p>
+<p>求该字节在有限域GF(2^8)上的乘法逆，”0”被映射为自身，即对于α∈GF(2^8)，求β∈GF(2^8)，</p>
+<p>使得 α·β=β·α=1mod(x^8+x^4+x^2+x+1)。</p>
+<p>对上一步求得的乘法逆作仿射变换</p>
+<p>yi=xi + x(i+4)mod8 + x(i+6)mod8 + x(i+7)mod8 + ci</p>
+<p>(其中ci是63<sub>10</sub>即01100011<sub>2</sub>的第i位），用矩阵表示为：</p>
+<p><img src="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464139837001.png" alt=""></p>
+<p>下面直接利用置换表完成替换：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void AES::SubBytes(unsigned char state[][4])</span><br><span class="line">&#123;</span><br><span class="line">    int r,c;</span><br><span class="line">    for(r=0; r&lt;4; r++)</span><br><span class="line">    &#123;</span><br><span class="line">        for(c=0; c&lt;4; c++)</span><br><span class="line">        &#123;</span><br><span class="line">            state[r][c] = Sbox[state[r][c]];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="ShiftRows-行移位变换"><a href="#ShiftRows-行移位变换" class="headerlink" title="ShiftRows(行移位变换)"></a>ShiftRows(行移位变换)</h4><p>行移位变换完成基于行的循环位移操作，变换方法：</p>
+<p><img src="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464105742351.png" alt=""></p>
+<p>在ByteRotation变换中，状态阵列的后3行循环移位不同的偏移量。移位变换作用于行上，第0行不变，第1行循环移位C1字节，第2行循环移位C2字节，第3行循环移位C3字节。</p>
+<p>偏移量C1、C2、C3与分组长度Nb有关，如下表所示：</p>
+<p><img src="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464139933244.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">void AES::ShiftRows(unsigned char state[][4])</span><br><span class="line">&#123;</span><br><span class="line">    unsigned char t[4];</span><br><span class="line">    int r,c;</span><br><span class="line">    for(r=1; r&lt;4; r++)</span><br><span class="line">    &#123;</span><br><span class="line">        for(c=0; c&lt;4; c++)</span><br><span class="line">        &#123;</span><br><span class="line">            t[c] = state[r][(c+r)%4];</span><br><span class="line">        &#125;</span><br><span class="line">        for(c=0; c&lt;4; c++)</span><br><span class="line">        &#123;</span><br><span class="line">            state[r][c] = t[c];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="MixColumns-列混淆变换"><a href="#MixColumns-列混淆变换" class="headerlink" title="MixColumns(列混淆变换)"></a>MixColumns(列混淆变换)</h4><p>将状态的列看作是有限域GF(2^8)上的多项式a(x)，与多项式c(x)=(03·x^3 + 01·x^2 + 01·x + 02) · mod(x^4 + 1)。</p>
+<p>逐列混合，方法：</p>
+<p>b(x) = (03·x^3 + 01·x^2 + 01·x + 02) · a(x) mod(x^4 + 1)</p>
+<p><img src="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464105885821.png" alt=""></p>
+<p>矩阵表示形式：</p>
+<p><img src="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464105904485.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">void AES::MixColumns(unsigned char state[][4])</span><br><span class="line">&#123;</span><br><span class="line">    unsigned char t[4];</span><br><span class="line">    int r,c;</span><br><span class="line">    for(c=0; c&lt; 4; c++)</span><br><span class="line">    &#123;</span><br><span class="line">        for(r=0; r&lt;4; r++)</span><br><span class="line">        &#123;</span><br><span class="line">            t[r] = state[r][c];</span><br><span class="line">        &#125;</span><br><span class="line">        for(r=0; r&lt;4; r++)</span><br><span class="line">        &#123;</span><br><span class="line">            state[r][c] = FFmul(0x02, t[r])</span><br><span class="line">                        ^ FFmul(0x03, t[(r+1)%4])</span><br><span class="line">                        ^ FFmul(0x01, t[(r+2)%4])</span><br><span class="line">                        ^ FFmul(0x01, t[(r+3)%4]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">unsigned char AES::FFmul(unsigned char a, unsigned char b)</span><br><span class="line">&#123;</span><br><span class="line">    unsigned char bw[4];</span><br><span class="line">    unsigned char res=0;</span><br><span class="line">    int i;</span><br><span class="line">    bw[0] = b;</span><br><span class="line">    for(i=1; i&lt;4; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        bw[i] = bw[i-1]&lt;&lt;1;</span><br><span class="line">        if(bw[i-1]&amp;0x80)</span><br><span class="line">        &#123;</span><br><span class="line">            bw[i]^=0x1b;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for(i=0; i&lt;4; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if((a&gt;&gt;i)&amp;0x01)</span><br><span class="line">        &#123;</span><br><span class="line">            res ^= bw[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中FFmul为有限域GF(28)上的乘法，标准算法应该是循环8次（b与a的每一位相乘，结果相加），但这里只用到最低2位，解密时用到的逆列混淆也只用了低4位，所以在这里高4位的运算是多余的，只计算低4位。</p>
+<p><strong>数学基础</strong></p>
+<p>AES的基础域是有限域 GF(2^8)：<br>一个GF(2)上的8次既约多项式可生成一个 GF(2^8)<br>GF(2^8)的全体元素构成加法交换群，线性空间。<br>GF(2^8)的非零元素构成乘法循环群。<br>GF(2^8)中的元素有多种表示：<br>字节： GF（2^8）={a7,a6,…a1,a0}<br>多项式形式： GF（2^8）={a7x7+a6x6+…+a1x+a0}<br>指数形式：GF(2^8)<em>={0, 1… 254}对数形式：GF(2^8)</em>={0, 1… 254}</p>
+<p>GF(2^8)的特征为 2 。</p>
+<p>AES的GF(2^8)表示：<br>AES采用的既约模多项式：<br>m(x)=x^8+x^4+x^3+x+1<br>AES采用GF(28)的多项式元素表示。<br>字节B＝b7b6b5b4b3b2b1b0可表示成GF(2)上的多项式：<br>b7x7+b6x6+b5x5+b4x4+b3x3+b2x2+b1x1+b0<br>例：字节57＝01010111的多项式表示：<br>01010111 x^6+x^4+x^2+x+1</p>
+<p>加法：两元素多项式的系数按位模 2加<br>例2：57＋83＝D4<br>(x6+x4+x2+x+1)⊕(x7+x+1)= x7+x6+x4+x2<br>乘法：两元素多项式相乘，模 m(x)<br>例3：57×83＝C1<br>(x6+x4+x2+x+1)×(x7+x+1)=x7+x6+1 mod m(x)<br>乘法单位元：字节01 多项式 1<br>乘法逆元：<br>设a(x)的逆元为b(x)，则 a(x)b(x)=1 mod m(x) 。<br>根据Euclid算法求出。</p>
+<p><img src="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464140268239.png" alt=""></p>
+<h4 id="AddRoundKey-轮密钥加变换"><a href="#AddRoundKey-轮密钥加变换" class="headerlink" title="AddRoundKey(轮密钥加变换)"></a>AddRoundKey(轮密钥加变换)</h4><p>简单来说就是逐字节相加，有限域GF(2^8)上的加法是模2加法，即异或：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void AES::AddRoundKey(unsigned char state[][4], unsigned char k[][4])</span><br><span class="line">&#123;</span><br><span class="line">    int r,c;</span><br><span class="line">    for(c=0; c&lt;4; c++)</span><br><span class="line">    &#123;</span><br><span class="line">        for(r=0; r&lt;4; r++)</span><br><span class="line">        &#123;</span><br><span class="line">            state[r][c] ^= k[r][c];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="KeyExpansion-密钥扩展"><a href="#KeyExpansion-密钥扩展" class="headerlink" title="KeyExpansion(密钥扩展)"></a>KeyExpansion(密钥扩展)</h4><p>密钥bit的总数＝分组长度×（轮数Round＋1）例如当分组长度为128bits和轮数Round为10时，轮密钥长度为128×(10＋1)＝1408bits。<br>将密码密钥扩展成一个扩展密钥。<br>从扩展密钥中取出轮密钥：第一个轮密钥由扩展密钥的第一个Nb个4字节字，第二个轮密钥由接下来的Nb个4字节字组成，以此类推。</p>
+<p>将输入的密钥扩展为11组128位密钥组，其中第0组为输入密钥本身</p>
+<p>其后第n组第i列 为 第n-1组第i列 与 第n组第i-1列之和（模2加法，1&lt;= i &lt;=3）</p>
+<p><img src="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464106070075.png" alt=""></p>
+<p>对于每一组 第一列即i=0，有特殊的处理：</p>
+<p><img src="https://raw.githubusercontent.com/tg6169/tmp/b4cb9281276d911268d5d29c977a777c56468659/script_1464106089844.png" alt=""></p>
+<p>将前一列即第n-1组第3列的4个字节循环左移1个字节，<br>并对每个字节进行字节替代变换SubBytes<br>将第一行（即第一个字节）与轮常量rc[n]相加<br>最后再与前一组该列相加。</p>
+<p><strong>加密过程</strong></p>
+<p>先将输入的明文按列序组合成4*4的矩阵，直接与第0组密钥（即输入的密钥）相加（异或），作为轮加密的输入。</p>
+<p>然后循环10次进行SubBytes、ShiftRows、MixColumns、AddRoundKey运算，最后恢复原序列。</p>
+<p>需要注意的是最后一轮并不进行MixColumns（列混淆变换）</p>
+<h3 id="解密的基本运算"><a href="#解密的基本运算" class="headerlink" title="解密的基本运算"></a>解密的基本运算</h3><p>AES解密算法与加密不同，基本运算中除了AddRoundKey（轮密钥加）不变外，其余的都需要进行逆变换，即</p>
+<p>InvSubBytes（逆字节替代）、InvShiftRows（逆行移位）、InvMixColumns（逆列混淆）。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/03/ardt/" rel="next" title="《真正的美国梦之队》">
+                <i class="fa fa-chevron-left"></i> 《真正的美国梦之队》
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODExOS8xNDY0OQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Tom Green</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#AES简介"><span class="nav-number">1.</span> <span class="nav-text">AES简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AES算法概述"><span class="nav-number">2.</span> <span class="nav-text">AES算法概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AES算法详解"><span class="nav-number">3.</span> <span class="nav-text">AES算法详解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ByteSubstitution-字节替代"><span class="nav-number">3.1.</span> <span class="nav-text">ByteSubstitution(字节替代)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ShiftRows-行移位变换"><span class="nav-number">3.2.</span> <span class="nav-text">ShiftRows(行移位变换)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MixColumns-列混淆变换"><span class="nav-number">3.3.</span> <span class="nav-text">MixColumns(列混淆变换)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AddRoundKey-轮密钥加变换"><span class="nav-number">3.4.</span> <span class="nav-text">AddRoundKey(轮密钥加变换)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KeyExpansion-密钥扩展"><span class="nav-number">3.5.</span> <span class="nav-text">KeyExpansion(密钥扩展)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解密的基本运算"><span class="nav-number">4.</span> <span class="nav-text">解密的基本运算</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tom Green</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
